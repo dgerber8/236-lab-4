@@ -1062,10 +1062,10 @@ void AssessCurrRule(vector<string> &currLeftSide, vector<vector<string>> &currRi
 	}
 	
 	// alphabetize adding
-	
-	if (isNew(ruleRel.GetRelation(),adding) == true)
+	vector<vector<string>> rel = ruleRel.GetRelation();
+	if (isNew(rel ,adding) == true)
 	{
-		RemoveDups(ruleRel.GetRelation(), adding);
+		RemoveDups(rel, adding);
 		int rowsToAss = adding.size();
 		for (int i = 0; i < rowsToAss; i++)
 		{
